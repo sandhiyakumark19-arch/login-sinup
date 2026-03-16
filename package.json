@@ -1,6 +1,5 @@
-{
+{ "homepage": "https://sandhiyakumark19-arch.github.io/login-sinup",
   "name": "home-page",
-  "homepage": "https://sandhiyakumark19-arch.github.io/loginsinup",
   "private": true,
   "version": "0.0.0",
   "type": "module",
