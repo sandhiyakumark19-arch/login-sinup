@@ -1,0 +1,178 @@
+/* Anime Background */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb);
+  background-size: 300% 300%;
+  animation: animeBG 8s ease infinite;
+  color: #1f2933;
+}
+
+/* Background Animation */
+@keyframes animeBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Home Container */
+.home-container,
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Glass Anime Card */
+.home-box,
+.form-container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  width: 360px;
+  max-width: 100%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: float 3s ease-in-out infinite;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.home-box:hover,
+.form-container:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.35);
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Headings */
+h1, h2 {
+  color: #111827;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.home-title {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.home-subtitle {
+  margin: 0 0 24px;
+  font-size: 0.98rem;
+  opacity: 0.9;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  background: #ff6ec4;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.03);
+  background: #7873f5;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.35);
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+}
+
+.primary-btn:hover {
+  background: linear-gradient(135deg, #ff7ac6, #6366f1);
+}
+
+.ghost-btn {
+  background: transparent;
+  color: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.ghost-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #111827;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  outline: none;
+  background: rgba(255, 255, 255, 0.7);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.7);
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-1px);
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Error */
+.error {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Success */
+.success {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Home buttons layout */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .home-box,
+  .form-container {
+    padding: 28px 22px;
+    width: 100%;
+  }
+
+  .home-title {
+    font-size: 1.8rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
